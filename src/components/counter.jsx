@@ -3,12 +3,12 @@ import React, { Component } from "react";
 class Counter extends Component {
   state = { count: 0, tags: [] };
 
-  constructor() {
-      super();
-      this.handleIncrement = this.handleIncrement.bind(this);
-  }
+//   constructor() {
+//       super();
+//       this.handleIncrement = this.handleIncrement.bind(this);
+//   }
 
-  handleIncrement() {
+  handleIncrement = () => {
       console.log("Button Clicked!", this);
   }
 

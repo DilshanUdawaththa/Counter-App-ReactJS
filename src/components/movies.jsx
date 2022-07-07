@@ -10,16 +10,17 @@ class Movies extends Component {
     const movies = this.state.movies.filter((m) => m._id !== movie._id);
     // this.setState({ movies: movies });
     this.setState({ movies });
-
   };
 
   render() {
-    if (this.state.movies.length === 0)
-      return <p>There are no movies in the database.</p>;
+    const { length: count } = this.state.movies;
+
+    if (count === 0) return <p>There are no movies in the database.</p>;
+    
     return (
       <React.Fragment>
         <h1>Movies Component</h1>
-        <p>Showing {this.state.movies.length} movies in the database.</p>
+        <p>Showing {count} movies in the database.</p>
         <table className="table">
           <thead>
             <tr>

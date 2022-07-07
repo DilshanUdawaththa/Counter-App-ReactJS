@@ -36,7 +36,7 @@ class App extends Component {
   render() {
     return (
       <>
-        <NavBar />
+        <NavBar totalCount={this.state.counters.filter(c => c.value > 0).length} />
         <div className="container">
           <Counters counters={this.state.counters} onReset={this.handleReset} onIncrement={this.handleIncrement} onDelete={this.handleDelete}/>
           <Movies />

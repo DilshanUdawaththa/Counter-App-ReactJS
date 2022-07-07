@@ -1,10 +1,10 @@
-import Counter from "./components/counter";
+import Counters from "./components/counters";
 import Movies from "./components/movies";
 
 function App() {
   return (
     <div className="container">
-      <Counter />
+      <Counters />
       <Movies />
     </div>
   );

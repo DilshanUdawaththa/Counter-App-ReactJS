@@ -35,7 +35,7 @@ class Counters extends Component {
   render() {
     return (
       <React.Fragment>
-        <button className="btn btn-primary btn-sm" onClick={this.handleReset}>Reset</button>
+        <button className="btn btn-primary btn-sm m-2" onClick={this.handleReset}>Reset</button>
         {this.state.counters.map((counter) => (
           <Counter key={counter.id} onDelete={this.handleDelete} onIncrement={this.handleIncrement} counter={counter} />
         ))}

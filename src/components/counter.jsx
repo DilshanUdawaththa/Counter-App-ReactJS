@@ -1,12 +1,6 @@
 import React, { Component } from "react";
 
 class Counter extends Component {
-  // state = { value: this.props.counter.value };
-
-  // handleIncrement = () => {
-  //   this.setState({ value: this.state.value + 1 });
-  // };
-
   render() {
     return (
       <React.Fragment>
@@ -18,7 +12,6 @@ class Counter extends Component {
           >
             Increment
           </button>
-          {/* {this.renderTags()} */}
           <button
             className="btn btn-danger btn-sm"
             onClick={() => this.props.onDelete(this.props.counter.id)}
@@ -29,11 +22,6 @@ class Counter extends Component {
       </React.Fragment>
     );
   }
-
-  // renderTags() {
-  //     if(this.state.tags.length === 0) return <p>There are no tags</p>;
-  //     return <ul>{this.state.tags.map((tag) => (<li key={tag}>{tag}</li>))}</ul>;
-  //   }
 
   getBadgeClasses() {
     let classes = "m-2 badge badge-";

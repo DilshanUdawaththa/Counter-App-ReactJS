@@ -4,17 +4,22 @@ import Counter from "./counter";
 class Counters extends Component {
   state = {
     counters: [
-      { id: 1, value: 0 },
+      { id: 1, value: 7 },
       { id: 2, value: 0 },
       { id: 3, value: 0 },
       { id: 4, value: 0 },
     ],
   };
+
+  handleDelete = () => {
+    console.log("handleDelete clicked");
+  }
+
   render() {
     return (
       <React.Fragment>
         {this.state.counters.map((counter) => (
-          <Counter key={counter.id} />
+          <Counter key={counter.id} onDelete={this.handleDelete} value={counter.value} selected={true} />
         ))}
       </React.Fragment>
     );
